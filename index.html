@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Comment jouer à Blind Timer : le guide en images du jeu de timing à chrono caché pour 2 à 4 joueurs.">
+<meta name="theme-color" content="#0F1220">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<title>Blind Timer – Comment jouer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#F5F6FB;--sf:#FFFFFF;--tx:#0F1220;--mu:#4E5373;--ac:#FFC94D;--on:#0F1220;--ln:#DFE2EF;--fr:#0F1220}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1220;--sf:#1A1F36;--tx:#F4F5FA;--mu:#A9AFC8;--ln:#2C3254;--fr:#2C3254}}
+:root[data-theme="dark"]{--bg:#0F1220;--sf:#1A1F36;--tx:#F4F5FA;--mu:#A9AFC8;--ln:#2C3254;--fr:#2C3254}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--tx);font:500 17px/1.6 "Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 18px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-weight:700;letter-spacing:.04em}
+.lang{display:flex;gap:6px}
+.lang button{font:inherit;font-size:14px;font-weight:700;min-width:44px;min-height:44px;border-radius:22px;border:1px solid var(--ln);background:var(--sf);color:var(--tx);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.eyebrow{margin:28px 0 0;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--mu)}
+h1{margin:6px 0 0;font-size:clamp(34px,7vw,56px);line-height:1.1}
+.hl{background:linear-gradient(transparent 62%,var(--ac) 62%)}
+.lead{max-width:640px;color:var(--mu);font-size:19px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 36px;padding:0;list-style:none}
+.facts li{padding:6px 14px;border-radius:20px;background:var(--sf);border:1px solid var(--ln);font-size:15px}
+.steps{display:grid;gap:18px;margin:0;padding:0;list-style:none}
+.step{display:grid;gap:18px;padding:22px;background:var(--sf);border:1px solid var(--ln);border-radius:24px}
+.head{display:flex;align-items:center;gap:12px}
+.num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ac);color:var(--on);display:flex;align-items:center;justify-content:center;font-weight:700}
+h2{margin:0;font-size:22px;line-height:1.25}
+.step p{margin:10px 0 0;color:var(--mu)}
+.shots{display:flex;gap:10px;justify-content:center}
+.ph{margin:0;flex:1 1 0;min-width:0;max-width:160px;border-radius:22px;overflow:hidden;border:4px solid var(--fr);box-shadow:0 10px 24px rgba(15,18,32,.22)}
+.ph img{display:block;width:100%;height:auto}
+@media (min-width:760px){.step{grid-template-columns:1fr auto;align-items:center;gap:28px}}
+.cols{display:grid;gap:18px;margin-top:18px}
+@media (min-width:760px){.cols{grid-template-columns:1fr 1fr}}
+.card{padding:22px;background:var(--sf);border:1px solid var(--ln);border-radius:24px}
+.card h2{margin-bottom:10px}
+.pts,.tips{margin:0;padding:0;list-style:none}
+.pts li{display:flex;justify-content:space-between;padding:10px 0;border-top:1px solid var(--ln)}
+.pts b{font-weight:700}
+.tips li{padding:10px 0 10px 22px;border-top:1px solid var(--ln);position:relative;color:var(--mu)}
+.tips li::before{content:"";position:absolute;left:0;top:19px;width:10px;height:10px;border-radius:50%;background:var(--ac)}
+footer{margin-top:36px;text-align:center;color:var(--mu);font-size:15px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand">BLIND TIMER</div><div class="lang" role="group" aria-label="Langue"><button type="button" data-l="fr">FR</button><button type="button" data-l="en">EN</button></div></header>
+<main>
+<section>
+<p class="eyebrow" data-k="eb">Mode d’emploi</p>
+<h1 data-k="h1">Comment jouer à <span class="hl">Blind Timer</span></h1>
+<p class="lead" data-k="lead">Un jeu de timing pour 2 à 4 joueurs sur un seul appareil. Le chrono disparaît presque aussitôt : fie-toi à ton instinct et arrête-le au bon moment.</p>
+<ul class="facts"><li data-k="f1">2 à 4 joueurs</li><li data-k="f2">1 seul appareil</li><li data-k="f3">Chrono caché</li></ul>
+</section>
+<ol class="steps">
+<li class="step"><div><div class="head"><span class="num">1</span><h2 data-k="s1h">Prépare la partie</h2></div><p data-k="s1p">Ajoute 2 à 4 joueurs et saisis leurs pseudos. Règle le temps cible avec − et + (7 s par défaut), choisis Local, puis appuie sur « Lancer la partie ».</p></div><div class="shots"><figure class="ph"><img src="assets/screens/01-menu.png" width="360" height="628" alt=""></figure></div></li>
+<li class="step"><div><div class="head"><span class="num">2</span><h2 data-k="s2h">Passe l’appareil</h2></div><p data-k="s2p">Chacun joue à son tour sur le même appareil. L’écran indique à qui le donner : passe-le, puis le joueur appuie sur « Je suis prêt ».</p></div><div class="shots"><figure class="ph"><img src="assets/screens/02-pass-device.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure><figure class="ph"><img src="assets/screens/06-pass-device-next.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure></div></li>
+<li class="step"><div><div class="head"><span class="num">3</span><h2 data-k="s3h">Le compte à rebours</h2></div><p data-k="s3p">Trois, deux, un… GO ! Le chrono démarre au GO, avec un bip pour chaque chiffre.</p></div><div class="shots"><figure class="ph"><img src="assets/screens/03-countdown.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure></div></li>
+<li class="step"><div><div class="head"><span class="num">4</span><h2 data-k="s4h">Sens le temps passer</h2></div><p data-k="s4p">Le temps cible s’affiche en haut, mais le chrono disparaît presque tout de suite. Appuie sur STOP (ou sur la barre Espace au clavier) quand tu penses que ce temps est écoulé. Un seul essai par manche.</p></div><div class="shots"><figure class="ph"><img src="assets/screens/04-round.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure></div></li>
+<li class="step"><div><div class="head"><span class="num">5</span><h2 data-k="s5h">Découvre ton écart</h2></div><p data-k="s5p">Ton temps réel et ton écart avec la cible apparaissent. Un signe + veut dire trop tard, un signe − trop tôt : plus c’est proche de zéro, mieux c’est. Appuie sur « Joueur suivant » ou, pour le dernier joueur, sur « Voir les résultats ».</p></div><div class="shots"><figure class="ph"><img src="assets/screens/05-gap.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure><figure class="ph"><img src="assets/screens/07-gap-last-player.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure></div></li>
+<li class="step"><div><div class="head"><span class="num">6</span><h2 data-k="s6h">Les résultats de la manche</h2></div><p data-k="s6p">Les joueurs sont classés du plus petit écart au plus grand, et le meilleur passe en jaune. Continue avec « Manche suivante », ou consulte les points cumulés avec « Classement général ».</p></div><div class="shots"><figure class="ph"><img src="assets/screens/08-round-results.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure><figure class="ph"><img src="assets/screens/09-round-results-last.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure></div></li>
+<li class="step"><div><div class="head"><span class="num">7</span><h2 data-k="s7h">Le classement final</h2></div><p data-k="s7p">Après la dernière manche, le joueur qui a cumulé le plus de points gagne la partie. « Rejouer » relance tout de suite, « Menu » ramène à l’accueil.</p></div><div class="shots"><figure class="ph"><img src="assets/screens/10-final-standings.png" width="360" height="628" alt="" loading="lazy" decoding="async"></figure></div></li>
+</ol>
+<div class="cols">
+<section class="card"><h2 data-k="ph">Comment sont comptés les points</h2><ul class="pts"><li><b data-k="p1">1er</b><span>3 pts</span></li><li><b data-k="p2">2e</b><span>2 pts</span></li><li><b data-k="p3">3e</b><span>1 pt</span></li><li><b data-k="p4">4e</b><span>0 pt</span></li></ul></section>
+<section class="card"><h2 data-k="th">Conseils</h2><ul class="tips"><li data-k="t1">Compte dans ta tête à ton rythme : inutile de chercher le chrono, il est déjà parti.</li><li data-k="t2">Plus la cible est longue, plus l’écart peut grossir : commence par 5 ou 7 secondes.</li><li data-k="t3">Joue plusieurs manches : le sens du temps s’affine vite.</li></ul></section>
+</div>
+</main>
+<footer><p>© 2026 MStudioGame · Blind Timer</p><p data-k="ft">Le mode online arrive bientôt.</p></footer>
+</div>
+<script>
+const EN={
+eb:"Player guide",
+h1:"How to play <span class=\"hl\">Blind Timer</span>",
+lead:"A timing game for 2 to 4 players on a single device. The timer vanishes almost instantly: trust your gut and stop it at the right moment.",
+f1:"2 to 4 players",f2:"1 device",f3:"Hidden timer",
+s1h:"Set up the game",
+s1p:"Add 2 to 4 players and type their nicknames. Set the target time with − and + (7 s by default), pick Local, then tap “Start game”.",
+s2h:"Pass the device",
+s2p:"Everyone plays in turn on the same device. The screen tells you who is next: hand it over, then that player taps “I’m ready”.",
+s3h:"The countdown",
+s3p:"Three, two, one… GO! The timer starts on GO, with a beep for each number.",
+s4h:"Feel the time pass",
+s4p:"The target time is shown at the top, but the timer vanishes almost immediately. Tap STOP (or press the Space bar on a keyboard) when you think that time has passed. One try per round.",
+s5h:"See your gap",
+s5p:"Your actual time and your gap from the target appear. A + sign means too late, a − sign means too early: the closer to zero, the better. Tap “Next player” or, for the last player, “See results”.",
+s6h:"Round results",
+s6p:"Players are ranked from smallest to largest gap, and the best one is highlighted in yellow. Continue with “Next round”, or check the running points with “Overall standings”.",
+s7h:"Final standings",
+s7p:"After the last round, the player with the most points wins the game. “Play again” restarts right away, “Menu” takes you back home.",
+ph:"How points work",p1:"1st",p2:"2nd",p3:"3rd",p4:"4th",
+th:"Tips",
+t1:"Count in your head at your own pace: don’t look for the timer, it’s already gone.",
+t2:"The longer the target, the bigger the gap can get: start with 5 or 7 seconds.",
+t3:"Play several rounds: your sense of time sharpens fast.",
+ft:"Online mode is coming soon."};
+const els=[...document.querySelectorAll("[data-k]")];
+els.forEach(function(e){e.dataset.fr=e.innerHTML;});
+const btns=[...document.querySelectorAll(".lang button")];
+function setLang(l){
+  document.documentElement.lang=l;
+  els.forEach(function(e){e.innerHTML=l==="en"?EN[e.dataset.k]:e.dataset.fr;});
+  btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.l===l));});
+  document.title=l==="en"?"Blind Timer – How to play":"Blind Timer – Comment jouer";
+  document.querySelectorAll(".step").forEach(function(s){
+    const t=s.querySelector("h2").textContent;
+    s.querySelectorAll("img").forEach(function(i){i.alt=t;});
+  });
+}
+function fromHash(){
+  const h=location.hash.slice(1);
+  if(h==="en"||h==="fr")return h;
+  return (navigator.language||"fr").toLowerCase().indexOf("fr")===0?"fr":"en";
+}
+btns.forEach(function(b){b.addEventListener("click",function(){location.hash=b.dataset.l;});});
+window.addEventListener("hashchange",function(){setLang(fromHash());});
+setLang(fromHash());
+</script>
+</body>
+</html>
